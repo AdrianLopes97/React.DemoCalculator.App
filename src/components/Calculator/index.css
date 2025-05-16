@@ -1,0 +1,55 @@
+.calculator {
+  width: 300px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.display {
+  background-color: #222;
+  color: white;
+  font-size: 2.5em;
+  padding: 20px;
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px; /* Add gap between buttons */
+}
+
+/* Remove border from buttons inside the grid */
+.buttons .calculator-button {
+  border: none;
+  border-radius: 0; /* Optional: remove border-radius if you want sharp corners */
+}
+
+/* Add borders to the grid lines */
+.buttons {
+  border-top: 1px solid #ccc; /* Add top border to the button grid */
+}
+
+.buttons .calculator-button:not(:nth-child(4n)) {
+  border-right: 1px solid #ccc; /* Add right border to buttons not in the last column */
+}
+
+.buttons .calculator-button:not(:nth-last-child(-n+4)) {
+  border-bottom: 1px solid #ccc; /* Add bottom border to buttons not in the last row */
+}
+
+/* Ensure the bottom-right button has appropriate borders if needed, or remove them if it looks better */
+.buttons .calculator-button:last-child {
+  border-bottom-right-radius: 10px; /* Match calculator border radius */
+}
+
+.buttons .calculator-button:nth-last-child(4) {
+    border-bottom-left-radius: 10px; /* Match calculator border radius */
+}

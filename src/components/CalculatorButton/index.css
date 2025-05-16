@@ -1,0 +1,38 @@
+.calculator-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calculator-button:hover {
+  background-color: #ddd;
+}
+
+.calculator-button:active {
+  background-color: #ccc;
+}
+
+.operator {
+  background-color: #f39c12;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #e68a00;
+}
+
+.operator:active {
+  background-color: #d37f00;
+}
+
+.double {
+  grid-column: span 2;
+}
+
+.zero {
+  grid-column: span 2;
+}
